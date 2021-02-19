@@ -113,10 +113,6 @@ TODO: Add long description of the pod here.
   spec.subspec 'Personalized' do |sub|
     sub.source_files = 'EasyComponents/Classes/Personalized/**/*'
   end
-  # 个性化方案
-  spec.subspec 'Personalized' do |sub|
-    sub.source_files = 'EasyComponents/Classes/Personalized/**/*'
-  end
   # 主题方案
   spec.subspec 'ThemeManager' do |sub|
     sub.source_files = 'EasyComponents/Classes/ThemeManager/**/*'
