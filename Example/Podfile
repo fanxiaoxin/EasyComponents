@@ -1,0 +1,14 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'EasyComponents_Example' do
+#  pod 'Kingfisher', '6.1.1'
+  pod 'EasyComponents', :path => '../'
+  pod 'EasyComponents/Kingfisher', :path => '../'
+  pod 'EasyComponents/MJRefresh', :path => '../'
+  pod 'EasyComponents/Promise', :path => '../'
+  
+#  pod 'EasyComponents/ViewControllerLoad', :path => '../'
+#  pod 'EasyComponents/Controls', :path => '../'
+end

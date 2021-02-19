@@ -1,0 +1,6 @@
+framework module EasyComponents {
+  umbrella header "EasyComponents-umbrella.h"
+
+  export *
+  module * { export * }
+}

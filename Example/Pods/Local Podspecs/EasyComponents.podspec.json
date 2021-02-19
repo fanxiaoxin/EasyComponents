@@ -1,0 +1,150 @@
+{
+  "name": "EasyComponents",
+  "version": "0.0.1",
+  "summary": "EasyCoding的扩展组件.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/fanxiaoxin/EasyComponents",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "fanxiaoxin": "fanxiaoxin_1987@126.com"
+  },
+  "source": {
+    "git": "https://github.com/fanxiaoxin/EasyComponents.git",
+    "tag": "0.0.1"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "swift_versions": "5.3",
+  "dependencies": {
+    "EasyCoding": [
+      "~> 0.1.0"
+    ]
+  },
+  "default_subspecs": [
+    "Controls",
+    "Api"
+  ],
+  "subspecs": [
+    {
+      "name": "Event",
+      "source_files": "EasyComponents/Classes/Event/**/*",
+      "pod_target_xcconfig": {
+        "OTHER_SWIFT_FLAGS": [
+          "-D",
+          "EASY_EVENT"
+        ]
+      }
+    },
+    {
+      "name": "Present",
+      "source_files": "EasyComponents/Classes/Present/**/*"
+    },
+    {
+      "name": "ViewControllerLoad",
+      "dependencies": {
+        "EasyComponents/Present": [
+
+        ]
+      },
+      "source_files": "EasyComponents/Classes/ViewControllerLoad/**/*",
+      "pod_target_xcconfig": {
+        "OTHER_SWIFT_FLAGS": [
+          "-D",
+          "EASY_VIEWCONTROLLERLOAD"
+        ]
+      }
+    },
+    {
+      "name": "Data",
+      "resource_bundles": {
+        "EasyComponents": [
+          "EasyComponents/Assets/*.xcassets"
+        ]
+      },
+      "source_files": "EasyComponents/Classes/Data/**/*",
+      "pod_target_xcconfig": {
+        "OTHER_SWIFT_FLAGS": [
+          "-D",
+          "EASY_DATA"
+        ]
+      }
+    },
+    {
+      "name": "Controls",
+      "dependencies": {
+        "EasyComponents/Event": [
+
+        ],
+        "EasyComponents/ViewControllerLoad": [
+
+        ],
+        "YYKeyboardManager": [
+          "~> 1.0.0"
+        ]
+      },
+      "source_files": "EasyComponents/Classes/Controls/**/*",
+      "pod_target_xcconfig": {
+        "OTHER_SWIFT_FLAGS": [
+          "-D",
+          "EASY_CONTROLS"
+        ]
+      }
+    },
+    {
+      "name": "Api",
+      "dependencies": {
+        "EasyComponents/Data": [
+
+        ],
+        "Moya": [
+          "~> 13.0"
+        ],
+        "HandyJSON": [
+          "~> 5.0.0"
+        ]
+      },
+      "source_files": "EasyComponents/Classes/Api/**/*"
+    },
+    {
+      "name": "Kingfisher",
+      "dependencies": {
+        "Kingfisher": [
+          "~> 6.0"
+        ]
+      }
+    },
+    {
+      "name": "MJRefresh",
+      "dependencies": {
+        "MJRefresh": [
+          "~> 3.4"
+        ]
+      }
+    },
+    {
+      "name": "Promise",
+      "dependencies": {
+        "PromiseKit": [
+          "~> 6.13"
+        ]
+      }
+    },
+    {
+      "name": "Personalized",
+      "source_files": "EasyComponents/Classes/Personalized/**/*"
+    },
+    {
+      "name": "Personalized",
+      "source_files": "EasyComponents/Classes/Personalized/**/*"
+    },
+    {
+      "name": "ThemeManager",
+      "source_files": "EasyComponents/Classes/ThemeManager/**/*"
+    }
+  ],
+  "swift_version": "5.3"
+}
